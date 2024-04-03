@@ -330,11 +330,21 @@ def f5(a, b, c, d, e, f, g, h, o, p):
 
 teams = int(input('Здравствуйте! Введите количество команд '))
 years = int(input('Здравствуйте! Введите необходимый срок правления '))
-functions1 = {'fun_1': funker1, 'fun_2': funker2, 'fun_3': funker3, 'fun_4': funker4, 'fun_5': funker5}
-functions2 = {'funk_1': funkers1, 'funk_2': funkers2, 'funk_3': funkers3, 'funk_4': funkers4, 'funk_5': funkers5}
+functions1 = {'fun_1': funker1, 'fun_2': funker2, 'fun_3': funker3, 'fun_4': funker4, 'fun_5': funker5,
+              'fun_6': funker6, 'fun_7': funker7, 'fun_8': funker8, 'fun_9': funker9, 'fun_10': funker10,
+              'fun_11': funker11, 'fun_12': funker12, 'fun_13': funker13, 'fun_14': funker14, 'fun_15': funker15,
+              'fun_16': funker16, 'fun_17': funker17, 'fun_18': funker18, 'fun_19': funker19, 'fun_20': funker20}
+functions2 = {'funk_1': funkers1, 'funk_2': funkers2, 'funk_3': funkers3, 'funk_4': funkers4, 'funk_5': funkers5,
+              'funk_6': rand1, 'funk_7': rand2, 'funk_8': rand3, 'funk_9': rand4, 'funk_10': rand5,
+              'funk_11': rand6}
 functions3 = {'funke_1': f1, 'funke_2': f2, 'funke_3': f3, 'funke_4': f4, 'funke_5': f5}
-func_name_1 = ['fun_1', 'fun_2', 'fun_3', 'fun_4', 'fun_5']
-func_name_2 = ['funk_1', 'funk_2', 'funk_3', 'funk_4', 'funk_5']
+func_name_1 = ['fun_1', 'fun_2', 'fun_3', 'fun_4', 'fun_5',
+               'fun_6', 'fun_7', 'fun_8', 'fun_9', 'fun_10',
+               'fun_11', 'fun_12', 'fun_13', 'fun_14', 'fun_15',
+               'fun_16', 'fun_17', 'fun_18', 'fun_19', 'fun_20']
+func_name_2 = ['funk_1', 'funk_2', 'funk_3', 'funk_4', 'funk_5',
+               'funk_6', 'funk_7', 'funk_8', 'funk_9', 'funk_10',
+               'funk11']
 func_name_3 = ['funke_1', 'funke_2', 'funke_3', 'funke_4', 'funke_5']
 points = [[50, 50, 50, 50, 50]] * teams
 condition = ['alive'] * teams
@@ -353,8 +363,8 @@ for i in range(years):
               f'Армия: {points[j][2]} \n'
               f'Казна: {points[j][3]} \n'
               f'Репутация: {points[j][4]}')
-        func = random.choice(func_name_1)
-        points[j] = functions1[func](points[j][0], points[j][1], points[j][2], points[j][3], points[j][4])
+        func = random.choice(func_name_2)
+        points[j] = functions2[func](points[j][0], points[j][1], points[j][2], points[j][3], points[j][4])
         print(f'Ваши очки: \n'
               f'Экология: {points[j][0]} \n'
               f'Жители: {points[j][1]} \n'
@@ -369,8 +379,8 @@ for i in range(years):
             condition[j] = 'dead'
             print(f'Поздравляю, вы прожили {i} лет!')
             continue
-        func = random.choice(func_name_2)
-        points[j] = functions2[func](points[j][0], points[j][1], points[j][2], points[j][3], points[j][4])
+        func = random.choice(func_name_1)
+        points[j] = functions1[func](points[j][0], points[j][1], points[j][2], points[j][3], points[j][4])
         print(f'Ваши очки: \n'
               f'Экология: {points[j][0]} \n'
               f'Жители: {points[j][1]} \n'
