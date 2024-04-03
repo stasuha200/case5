@@ -3,8 +3,10 @@ import random
 
 def funker1(a, b, c, d, e):
     answer = input('Мы разрабатываем сыворотку, способную повысить продуктивность коров. '
-                   'Можно ее протестировать ?')
-    if answer == 'yes':
+                   'Можно ее протестировать ?'
+                   '1 - Да'
+                   '0 - Нет')
+    if answer == '1':
         return [a-20, b-10, c, d+20, e]
     else:
         return [a, b+10, c, d - 15, e]
@@ -12,34 +14,46 @@ def funker1(a, b, c, d, e):
 
 def funker2(a, b, c, d, e):
     answer = input('В интернете вас высмеивают и критикуют.'
-                   'Наказать виновных?')
-    if answer == 'yes':
+                   'Наказать виновных?'
+                   '1 - Да'
+                   '0 - Нет'
+                   )
+    if answer == '1':
         return [a, b-15, c, d+15, e]
     else:
         return [a, b+10, c, d - 10, e]
 
 
 def funker3(a, b, c, d, e):
-    answer = input('Нужно увеличить военный бюджет?')
-    if answer == 'yes':
+    answer = input('Нужно увеличить военный бюджет?'
+                   '1 - Да'
+                   '0 - Нет'
+                   )
+    if answer == '1':
         return [a, b, c+15, d-20, e]
     else:
         return [a, b, c-20, d + 15, e]
 
 
 def funker4(a, b, c, d, e):
-    answer = input('Испытания ядерного оружия могли бы существенно продвинуть науку вперед.')
-    if answer == 'yes':
+    answer = input('Испытания ядерного оружия могли бы существенно продвинуть науку вперед.'
+                   '1 - Да'
+                   '0 - Нет'
+                   )
+    if answer == '1':
         return [a-31, b-15, c, d+20, e]
     else:
         return [a+15, b+10, c, d - 15, e]
 
 
 def funker5(a, b, c, d, e):
-    answer = input('Население процветает, а правительству нужны деньги. Поднять налоги?')
-    if answer == 'Поднять немного':
+    answer = input('Население процветает, а правительству нужны деньги. Поднять налоги?'
+                   '1 - Поднять немного'
+                   '0 - Удвоить'
+                   )
+    if answer == '1':
         return [a, b, c, d+10, e]
-    elif answer == 'Удвоить':
+    elif answer == '0':
         return [a, b-15, c, d + 20, e]
 
 
@@ -289,40 +303,55 @@ def rand6(a, b, c, d, e):
 
 
 def f1(a, b, c, d, e, f, g, h, o, p):
-    answer = input('Ввести санкции?')
-    if answer == 'Да':
+    answer = input('Ввести санкции?'
+                   '1 - Да'
+                   '0 - Нет'
+                   )
+    if answer == '1':
         return [a, b, c, d-5, e+15], [f, g-5, h, o-10, p-10]
     else:
         return [a, b, c, d, e-20], [f, g, h, o, p]
 
 
 def f2(a, b, c, d, e, f, g, h, o, p):
-    answer = input('Устроить бомбордировку?')
-    if answer == 'Да':
+    answer = input('Устроить бомбордировку?'
+                   '1 - Да'
+                   '0 - Нет'
+                   )
+    if answer == '1':
         return [a, b-5, c+5, d-5, e-30], [f-10, g-5, h-10, o-10, p+20]
     else:
         return [a, b, c, d, e], [f, g, h, o, p]
 
 
 def f3(a, b, c, d, e, f, g, h, o, p):
-    answer = input('Дать в долг?')
-    if answer == 'Да':
+    answer = input('Дать в долг?'
+                   '1 - Да'
+                   '0 - Нет'
+                   )
+    if answer == '1':
         return [a, b, c, d-10, e+20], [f, g+5, h, o+10, p]
     else:
         return [a, b+10, c, d, e], [f, g, h, o, p]
 
 
 def f4(a, b, c, d, e, f, g, h, o, p):
-    answer = input('Провести товарищеский матч?')
-    if answer == 'Да':
+    answer = input('Провести товарищеский матч?'
+                   '1 - Да'
+                   '0 - Нет'
+                   )
+    if answer == '1':
         return [a, b+5, c, d-10, e+15], [f, g+5, h, o-10, p+15]
     else:
         return [a, b-5, c, d, e], [f, g-5, h, o, p]
 
 
 def f5(a, b, c, d, e, f, g, h, o, p):
-    answer = input('Выбросить отходы?')
-    if answer == 'Да':
+    answer = input('Выбросить отходы?'
+                   '1 - Да'
+                   '0 - Нет'
+                   )
+    if answer == '1':
         return [a+15, b+5, c, d+5, e-15], [f-15, g-5, h, o-5, p+10]
     else:
         return [a-10, b-5, c, d-5, e], [f, g, h, o, p]
