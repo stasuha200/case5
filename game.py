@@ -328,6 +328,111 @@ def f5(a, b, c, d, e, f, g, h, o, p):
         return [a-10, b-5, c, d-5, e], [f, g, h, o, p]
 
 
+def diplomacy(a, b, c, d, e, f, g, h, o, p):
+    answer = input('Близлежащая страна предложила установить дипломатические отношения.'
+                   '1 - Поддержать дипломатические отношения'
+                   '0 - Отказаться от предложения')
+    if answer == '1':
+        return [a, b, c, d+15, e+20], [f, g, h, o+15, p]
+    else:
+        return [a, b, c, d, e-20], [f, g, h, o, p]
+
+
+def negotiations(a, b, c, d, e, f, g, h, o, p):
+    answer = input('Союз стран предложил провести переговоры для решения глобальной экологической проблемы.'
+                   'Он нуждается в финансировании другими странами.'
+                   '1 - Согласиться на переговоры'
+                   '0 - Отказаться от переговоров')
+    if answer == '1':
+        return [a+20, b, c, d-15, e+15], [f+20, g, h, o, p]
+    else:
+        return [a-20, b-5, c, d, e+15], [f-20, g-5, h, o, p]
+
+
+def trade(a, b, c, d, e, f, g, h, o, p):
+    answer = input('Появилась возможность развить новые торговые отношения с соседней страной.'
+                   '1 - Расширить торговые связи'
+                   '0 - Оставить прежние торговые отношения')
+    if answer == '1':
+        return [a, b+5, c, d+30, e+10], [f, g+5, h, o+30, p]
+    else:
+        return [a, b, c, d-10, e-10], [f, g, h, o-10, p]
+
+
+def project(a, b, c, d, e, f, g, h, o, p):
+    answer = input('Вашей стране поступило предложение принять участие в рискованном экономическом проекте.'
+                   '1 - Согласиться на авантюру'
+                   '0 - Отказаться от предложения')
+    if answer == '1':
+        print('Экономический проект провалился.')
+        return [a, b, c, d-20, e-10], [f, g, h, o-20, p-10]
+    else:
+        return [a, b, c, d, e-10], [f, g, h, o, p]
+
+
+def festival(a, b, c, d, e, f, g, h, o, p):
+    answer = input('Граждане просят у вас разрешение провести международный фестиваль'
+                   ' с целью обмена культурами в соотрудничестве с народами других стран'
+                   '1 - Дать добро'
+                   '0 - Отказать')
+    if answer == '1':
+        return [a, b, c, d-20, e+20], [f, g, h, o-20, p+20]
+    else:
+        return [a, b, c, d, e-10], [f, g, h, o, p]
+
+
+def aid(a, b, c, d, e, f, g, h, o, p):
+    answer = input('Вас просят о военной помощи ваш союзник.'
+                   '1 - Помочь'
+                   '0 - Отказать')
+    if answer == '1':
+        return [a, b, c-30, d-20, e+30], [f, g, h+30, o+20, p-10]
+    else:
+        return [a, b, c, d, e-10], [f, g-20, h-30, o, p]
+
+
+def calamity(a, b, c, d, e, f, g, h, o, p):
+    answer = input('Во многих странах произошло стихийное бедствие.'
+                   '1 - Предоставить гуманитарную помощь'
+                   '0 - Не помогать')
+    if answer == '1':
+        return [a, b, c, d-20, e+20], [f+15, g, h, o, p]
+    else:
+        return [a, b, c, d, e-20], [f-15, g-20, h, o-10, p]
+
+
+def peace(a, b, c, d, e, f, g, h, o, p):
+    answer = input('Вы можете принять участие в миротворческих миссиях '
+                   'для предотвращения конфликтов между странами.'
+                   '1 - Принять участие'
+                   '0 - Не принимать участия')
+    if answer == '1':
+        return [a, b, c, d-10, e+20], [f, g, h, o, p]
+    else:
+        return [a, b, c, d, e-20], [f, g-20, h, o, p]
+
+
+def war(a, b, c, d, e, f, g, h, o, p):
+    answer = input('На вас напала соседняя страна своими вооружёнными силами.'
+                   '1 - Напасть в ответ'
+                   '0 - Защищаться и предложить мирные переговоры')
+    if answer == '1':
+        return [a-10, b-20, c-30, d-10, e-20], [f-10, g-20, h-30, o-10, p-20]
+    else:
+        return [a, b, c, d, e+30], [f, g, h, o, p]
+
+
+def levy(a, b, c, d, e, f, g, h, o, p):
+    answer = input('В вашей стране кризисная ситуация в экономике. '
+                   'Вы можете поднять таможенную пошлину для других стран.'
+                   '1 - Увеличить налог'
+                   '0 - Оставить прежнюю ставку')
+    if answer == '1':
+        return [a, b, c, d+20, e-20], [f, g, h, o-20, p]
+    else:
+        return [a, b, c, d, e+10], [f, g, h, o, p]
+
+
 teams = int(input('Здравствуйте! Введите количество команд '))
 years = int(input('Здравствуйте! Введите необходимый срок правления '))
 functions1 = {'fun_1': funker1, 'fun_2': funker2, 'fun_3': funker3, 'fun_4': funker4, 'fun_5': funker5,
@@ -337,7 +442,9 @@ functions1 = {'fun_1': funker1, 'fun_2': funker2, 'fun_3': funker3, 'fun_4': fun
 functions2 = {'funk_1': funkers1, 'funk_2': funkers2, 'funk_3': funkers3, 'funk_4': funkers4, 'funk_5': funkers5,
               'funk_6': rand1, 'funk_7': rand2, 'funk_8': rand3, 'funk_9': rand4, 'funk_10': rand5,
               'funk_11': rand6}
-functions3 = {'funke_1': f1, 'funke_2': f2, 'funke_3': f3, 'funke_4': f4, 'funke_5': f5}
+functions3 = {'funke_1': f1, 'funke_2': f2, 'funke_3': f3, 'funke_4': f4, 'funke_5': f5,
+              'funke_6': diplomacy, 'funke_7': negotiations, 'funke_8': trade, 'funke_9': project, 'funke_10': festival,
+              'funke_11': aid, 'funke_12': calamity, 'funke_13': peace, 'funke_14': war, 'funke_15': levy}
 func_name_1 = ['fun_1', 'fun_2', 'fun_3', 'fun_4', 'fun_5',
                'fun_6', 'fun_7', 'fun_8', 'fun_9', 'fun_10',
                'fun_11', 'fun_12', 'fun_13', 'fun_14', 'fun_15',
@@ -345,7 +452,9 @@ func_name_1 = ['fun_1', 'fun_2', 'fun_3', 'fun_4', 'fun_5',
 func_name_2 = ['funk_1', 'funk_2', 'funk_3', 'funk_4', 'funk_5',
                'funk_6', 'funk_7', 'funk_8', 'funk_9', 'funk_10',
                'funk11']
-func_name_3 = ['funke_1', 'funke_2', 'funke_3', 'funke_4', 'funke_5']
+func_name_3 = ['funke_1', 'funke_2', 'funke_3', 'funke_4', 'funke_5',
+               'funke_6', 'funke_7', 'funke_8', 'funke_9', 'funke_10',
+               'funke_11', 'funke_12', 'funke_13', 'funke_14', 'funke_15']
 points = [[50, 50, 50, 50, 50]] * teams
 condition = ['alive'] * teams
 results = [0] * teams
