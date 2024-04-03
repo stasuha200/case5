@@ -64,9 +64,9 @@ def funker6(a, b, c, d, e):
                    '1 - Усилить армию и оборону \n'
                    '0 - Решить конфликт мирным путем')
     if answer == '1':
-        return [a, b - 50, c, d - 50, e + 50]
+        return [a, b - 20, c, d - 20, e + 20]
     elif answer == '0':
-        return [a, b - 50, c, d + 50, e - 50]
+        return [a, b - 10, c, d + 20, e - 20]
 
 
 def funker7(a, b, c, d, e):
@@ -76,9 +76,9 @@ def funker7(a, b, c, d, e):
                    '1 - Сократить расходы на армию \n'
                    '0 - Увеличить инвестиции в армию')
     if answer == '1':
-        return [a, b + 50, c - 50, d + 50, e]
+        return [a, b + 20, c - 20, d + 20, e]
     elif answer == '0':
-        return [a, b - 50, c, d - 50, e + 50]
+        return [a, b - 20, c, d - 20, e + 20]
 
 
 def funker8(a, b, c, d, e):
@@ -88,9 +88,9 @@ def funker8(a, b, c, d, e):
                    '1 - Инвестировать в инфраструктуру \n'
                    '0 - Увеличить бюджет на армию')
     if answer == '1':
-        return [a, b + 50, c, d - 50, e]
+        return [a, b + 15, c, d - 20, e]
     elif answer == '0':
-        return [a, b, c, d - 50, e + 50]
+        return [a, b, c, d - 15, e + 20]
 
 
 def funker9(a, b, c, d, e):
@@ -100,9 +100,9 @@ def funker9(a, b, c, d, e):
                    '1 - Подписать торговое соглашение \n'
                    '0 - Отказаться от соглашения')
     if answer == '1':
-        return [a, b - 50, c, d + 50, e + 50]
+        return [a, b - 15, c, d + 20, e + 20]
     elif answer == '0':
-        return [a, b + 50, c, d - 50, e]
+        return [a, b + 15, c, d - 20, e-5]
 
 
 def funker10(a, b, c, d, e):
@@ -112,9 +112,9 @@ def funker10(a, b, c, d, e):
                    '1 - Увеличить финансирование кибербезопасности \n'
                    '0 - Увеличить численность армии')
     if answer == '1':
-        return [a, b, c, d - 50, e + 50]
+        return [a, b, c, d - 25, e + 15]
     elif answer == '0':
-        return [a, b, c + 50, d - 50, e]
+        return [a, b, c + 20, d - 15, e]
 
 
 def funker11(a, b, c, d, e):
@@ -124,9 +124,9 @@ def funker11(a, b, c, d, e):
                    '1 - Помощь пострадавшим \n'
                    '0 - Усилить армию')
     if answer == '1':
-        return [a, b + 50, c, d - 50, e + 50]
+        return [a, b + 20, c, d - 20, e + 25]
     elif answer == '0':
-        return [a, b, c + 50, d - 50, e]
+        return [a, b, c + 25, d - 25, e]
 
 
 def funker12(a, b, c, d, e):
@@ -136,9 +136,9 @@ def funker12(a, b, c, d, e):
                    '1 - Участвовать в миротворческой операции \n'
                    '0 - Сосредоточиться на национальной безопасности')
     if answer == '1':
-        return [a, b, c - 50, d, e + 50]
+        return [a, b, c - 20, d, e + 20]
     elif answer == '0':
-        return [a, b, c + 50, d, e - 50]
+        return [a, b, c + 20, d, e - 20]
 
 
 def funker13(a, b, c, d, e):
@@ -148,9 +148,9 @@ def funker13(a, b, c, d, e):
                    '1 -  Выделить средства на медицину и вакцины \n'
                    '0 - Усилить контроль и бюджет на оборону')
     if answer == '1':
-        return [a, b, c, d - 50, e + 50]
+        return [a, b, c, d - 15, e + 20]
     elif answer == '0':
-        return [a, b, c + 50, d - 50, e]
+        return [a, b, c + 20, d - 15, e]
 
 
 def funker14(a, b, c, d, e):
@@ -160,9 +160,9 @@ def funker14(a, b, c, d, e):
                    '1 - Построить ядерную электростанцию \n'
                    '0 - Направить средства на социальные программы')
     if answer == '1':
-        return [a, b + 50, c, d - 50, e + 50]
+        return [a, b + 20, c, d - 20, e + 15]
     elif answer == '0':
-        return [a, b - 50, c + 50, d, e]
+        return [a, b - 20, c + 20, d, e]
 
 
 def funker15(a, b, c, d, e):
@@ -173,9 +173,9 @@ def funker15(a, b, c, d, e):
                    '1 - Создать программу борьбы с бедностью \n'
                    '0 - Увеличить численность армии')
     if answer == '1':
-        return [a, b + 50, c, d - 50, e + 50]
+        return [a, b + 15, c, d - 20, e + 20]
     elif answer == '0':
-        return [a, b, c + 50, d - 50, e]
+        return [a, b, c + 15, d - 20, e]
 
 
 def funker16(a, b, c, d, e):
@@ -187,7 +187,7 @@ def funker16(a, b, c, d, e):
     if answer == '1':
         return [a, b, c, d + 10, e]
     elif answer == '0':
-        return [a, b, c + 50, d - 50, e]
+        return [a, b, c + 20, d - 20, e]
 
 
 def funker17(a, b, c, d, e):
@@ -197,9 +197,9 @@ def funker17(a, b, c, d, e):
                    '1 - Построить международный мост \n'
                    '0 - Отказаться от проекта')
     if answer == '1':
-        return [a, b, c, d - 50, e + 50]
+        return [a, b, c, d - 20, e + 15]
     elif answer == '0':
-        return [a, b, c, d + 50, e - 50]
+        return [a, b, c, d + 20, e - 15]
 
 
 def funker18(a, b, c, d, e):
@@ -209,9 +209,9 @@ def funker18(a, b, c, d, e):
                    '1 - Улучшить полицию \n'
                    '0 - Увеличить финансирование армии')
     if answer == '1':
-        return [a, b, c, d - 50, e + 50]
+        return [a, b, c, d - 15, e + 10]
     elif answer == '0':
-        return [a, b, c + 50, d - 50, e]
+        return [a, b, c + 15, d - 15, e]
 
 
 def funker19(a, b, c, d, e):
@@ -221,9 +221,9 @@ def funker19(a, b, c, d, e):
                    '1 - Ввести экономические меры \n'
                    '0 - Обратиться к международным инвесторам')
     if answer == '1':
-        return [a, b - 50, c, d + 50, e]
+        return [a, b - 20, c, d + 20, e]
     elif answer == '0':
-        return [a, b, c, d - 50, e]
+        return [a, b, c, d - 35, e]
 
 
 def funker20(a, b, c, d, e):
@@ -233,9 +233,9 @@ def funker20(a, b, c, d, e):
                    '1 - Строительство водохранилищ \n'
                    '0 - Улучшение военной техники')
     if answer == '1':
-        return [a, b + 50, c, d - 50, e + 50]
+        return [a, b + 10, c, d - 20, e + 10]
     elif answer == '0':
-        return [a, b, c + 50, d - 50, e]
+        return [a, b, c + 20, d - 20, e]
 
 
 def funkers1(a, b, c, d, e):
@@ -495,12 +495,6 @@ for i in range(years):
         if condition == 'dead':
             continue
         print(f'Приветствую, команда номер {j+1}.')
-        print(f'Ваши очки: \n'
-              f'Экология: {points[j][0]} \n'
-              f'Жители: {points[j][1]} \n'
-              f'Армия: {points[j][2]} \n'
-              f'Казна: {points[j][3]} \n'
-              f'Репутация: {points[j][4]}')
         func = random.choice(func_name_2)
         points[j] = functions2[func](points[j][0], points[j][1], points[j][2], points[j][3], points[j][4])
         print(f'Ваши очки: \n'
