@@ -30,3 +30,7 @@ def rand7(a, b, c, d, e):
 def rand8(a, b, c, d, e):
     print('Вы стали победителем The International 2024')
     return [a, b, c, d+20, e+10]
+
+def rand9(a, b, c, d, e):
+    print('Экоактивисты 15 раз облили супом картины в зале современного искусства, но этого никто так и не заметил')
+    return [a, b, c, d+10, e-10]
