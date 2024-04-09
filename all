@@ -38,3 +38,7 @@ def rand9(a, b, c, d, e):
 def rand10(a, b, c, d, e):
     print('Был найден бункер с советским вооружением')
     return [a, b, c+20, d, e]
+
+def rand11(a, b, c, d, e):
+    print('«Своих не бросаем», — в стране запретили дзюдо')
+    return [a, b, c+10, d+10, e+20]
