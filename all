@@ -26,3 +26,7 @@ def rand6(a, b, c, d, e):
 def rand7(a, b, c, d, e):
     print('Из алфавита уберут букву «Ў» после госпитализации туриста, пытавшегося её прочитать')
     return [a, b-10, c, d, e+20]
+
+def rand8(a, b, c, d, e):
+    print('Вы стали победителем The International 2024')
+    return [a, b, c, d+20, e+10]
