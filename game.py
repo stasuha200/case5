@@ -565,8 +565,14 @@ def military_bloc(a, b, c, d, e, f, g, h, o, p):
         return [a, b, c, d, e-20], [f, g, h, o, p]
 
 
-teams = int(input('Здравствуйте! Введите количество команд '))
-years = int(input('Здравствуйте! Введите необходимый срок правления '))
+teams = int(input('Здравствуйте! Введите количество команд ')) #ВВодим количество команд
+years = int(input('Здравствуйте! Введите необходимый срок правления ')) #ВВодим количество лет, необходимых прожить для победы
+'''
+Здесь я создал словари и списки. Так как при ходе игрока ему будут попадаться случайные функции, я воспользовался random,
+чтобы нам выпадало случайное значение из списка всех функций. В списках ключи для словарей, именно из них мы берем случайное значение,
+потом это случайное значение мы используем как ключ, с помощью чего вызываем значения из словаря, ну а значение словаря 
+- это и есть наша функция, которую мы сразу и вызываем.
+'''
 functions1 = {'fun_1': funker1, 'fun_2': funker2, 'fun_3': funker3, 'fun_4': funker4, 'fun_5': funker5,
               'fun_6': funker6, 'fun_7': funker7, 'fun_8': funker8, 'fun_9': funker9, 'fun_10': funker10,
               'fun_11': funker11, 'fun_12': funker12, 'fun_13': funker13, 'fun_14': funker14, 'fun_15': funker15,
@@ -592,25 +598,33 @@ func_name_3 = ['funke_1', 'funke_2', 'funke_3', 'funke_4', 'funke_5',
                'funke_6', 'funke_7', 'funke_8', 'funke_9', 'funke_10',
                'funke_11', 'funke_12', 'funke_13', 'funke_14', 'funke_15',
                'funke_16', 'funke_17', 'funke_18', 'funke_19', 'funke_20']
-points = [[50, 50, 50, 50, 50]] * teams
-condition = ['alive'] * teams
-results = [0] * teams
+points = [[50, 50, 50, 50, 50]] * teams #Колво очков каждой команды
+condition = ['alive'] * teams #Нужно для проверки: жива команда или нет, чтобы если команда умерла, ход пропускался
+results = [0] * teams  #Колво лет, которые прожила каждая команда, умножаем на teams так как колво команд у нас переменная
 for i in range(years):
-    if ('alive' in condition) == 0:
+    '''
+    Первый цикл отвечает за годы. То есть в первом году проходят все команды и после этого мы переходим на след год
+    '''
+    if ('alive' in condition) == 0: #Проверка на живость всех команд, если все мертвы игра заканчивается
         print('К сожалению, выживших не осталось')
         break
-    for j in range(teams):
+    for j in range(teams): #Проверка на живость для конкретной команды, если команда мертва, ход пропускается
         if condition == 'dead':
             continue
         print(f'Приветствую, команда номер {j+1}.')
+        # random.choice берет случайный элемент из списка, с помощью него функция и запускается случайно, но пока что мы получаем только ключ
         func = random.choice(func_name_2)
+        # points[j] колво очко определенной команды приравнивается к значению функции
+        # Функцию мы вызываем из словаря, используя ключ, который мы случайно получили, и как аргументы используем очки данной команды
         points[j] = functions2[func](points[j][0], points[j][1], points[j][2], points[j][3], points[j][4])
+        #Вывод очков команды
         print(f'Ваши очки: \n'
               f'Экология: {points[j][0]} \n'
               f'Жители: {points[j][1]} \n'
               f'Армия: {points[j][2]} \n'
               f'Казна: {points[j][3]} \n'
               f'Репутация: {points[j][4]}')
+        # Проверка выжила ли команда именно после данного хода
         if (points[j][0] <= 0 or points[j][0] >= 100 or points[j][1] <= 0
                 or points[j][1] >= 100 or points[j][2] <= 0
                 or points[j][2] >= 100 or points[j][3] <= 0
@@ -619,6 +633,7 @@ for i in range(years):
             condition[j] = 'dead'
             print(f'Поздравляю, вы прожили {i} лет!')
             continue
+        # Тот же вызыв функции, только из другого списка
         func = random.choice(func_name_1)
         points[j] = functions1[func](points[j][0], points[j][1], points[j][2], points[j][3], points[j][4])
         print(f'Ваши очки: \n'
@@ -627,6 +642,7 @@ for i in range(years):
               f'Армия: {points[j][2]} \n'
               f'Казна: {points[j][3]} \n'
               f'Репутация: {points[j][4]}')
+        # Проверка выжила ли команда именно после данного хода
         if (points[j][0] <= 0 or points[j][0] >= 100 or points[j][1] <= 0
                 or points[j][1] >= 100 or points[j][2] <= 0
                 or points[j][2] >= 100 or points[j][3] <= 0
@@ -635,6 +651,7 @@ for i in range(years):
             condition[j] = 'dead'
             print(f'Поздравляю, вы прожили {i} лет!')
             continue
+        # Тот же вызыв функции, только из другого списка
         func = random.choice(func_name_1)
         points[j] = functions1[func](points[j][0], points[j][1], points[j][2], points[j][3], points[j][4])
         print(f'Ваши очки: \n'
@@ -643,6 +660,7 @@ for i in range(years):
               f'Армия: {points[j][2]} \n'
               f'Казна: {points[j][3]} \n'
               f'Репутация: {points[j][4]}')
+        # Проверка выжила ли команда именно после данного хода
         if (points[j][0] <= 0 or points[j][0] >= 100 or points[j][1] <= 0
                 or points[j][1] >= 100 or points[j][2] <= 0
                 or points[j][2] >= 100 or points[j][3] <= 0
@@ -669,7 +687,9 @@ for i in range(years):
             condition[j] = 'dead'
             print(f'Поздравляю, вы прожили {i} лет!')
             continue
+        # Если команда пережила этот год, то мы прибавляем единичку
         results[j] += 1
+# Итоговый вывод результатов команды
 print(f'Результаты команд:')
 for k in range(teams):
     if 11 <= (results[k] % 100) <= 19:
